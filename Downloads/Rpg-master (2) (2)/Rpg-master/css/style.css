@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+html, body {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(162, 162, 157);
+}
+
+
+.container-fluid {
+	height: 100%;
+}
+
+tr td {
+	width: 32px;
+	height: 32px;
+	border: solid 3px black;
+	background-color: #fbf5f3;
+}
+
+.img {
+	width: 20%;
+}
+
+#grid {
+	width: 100% !important;
+	height: 685px !important;
+}
+
+br {
+	content: "";
+	margin: 0.5em;
+	display: block;
+  }
+
+#feed, #playersTab {
+	height: 300px;
+	width: 100%;
+	border: 3px solid black;
+	overflow: scroll;
+	overflow-x: hidden;
+	line-height: 150%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+tr td[type="blocked"] {
+	background-color: black;
+}
+
+.assassin {
+	background-image: url(../img/assassin1.png);
+	background-size: 97%;
+}
+
+.ghoul {
+	background-image: url(../img/assassin2.png);
+	background-size: 97%;
+}
+
+
+tr td[weapon="1"] {
+	background-image: url(../img/axe.png);
+	background-size: 97%;
+}
+
+tr td[weapon="2"] {
+	background-image: url(../img/dagger.png);
+	background-size: 97%;
+}
+
+tr td[weapon="3"] {
+	background-image: url(../img/nunchaku.png);
+	background-size: 97%;
+}
+
+tr td[weapon="4"] {
+	background-image: url(../img/tomahawk.png);
+	background-size: 97%;
+}
+
+tr td[player="0"] {
+	background-image: url(../img/assassin1.png);
+	background-size: 97%;
+}
+
+tr td[player="1"] {
+	background-image: url(../img/assassin2.png);
+	background-size: 97%;
+}
+
+.container {
+	width: 95% !important;
+}
+
+tr td[goto="true"] {
+	cursor: pointer;
+}
+
+tr td[changePosition="true"] {
+	background-color: grey;
+}
+
+#gameBoard {
+	width: 100%;
+	height: 730px;
+}
+
+.points {
+	height: 170px;
+	background-color: black !important;
+}
+
+.card_0, .card_1 {
+	padding: 0px !important;
+	height: 238px !important;
+}
+
+#preview, #game, #results {
+	width: 100%;
+	height: 100%;
+
+}
+
+.card-content {
+	font-size: 20px;
+}
+
+.hidden {
+	display: none;
+	width: 103%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.damage {
+	font-size: 25px;
+	z-index: 1000;
+	color: white;
+}
+
+.restart > .btn-floating.btn-large {
+	font-size: 11px;
+	font-style: bold;
+	margin: 5px;
+}
