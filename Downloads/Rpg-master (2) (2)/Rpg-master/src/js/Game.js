@@ -42,26 +42,22 @@ class Game {
     };
 
     static getOpponentStrategy(type, opponent) {
-        while (this.hasClicked == false) {
-            if (this.opponent.position == 0) {
-                $(".card_" + this.opponent.position).css("border", "3px solid #FFD23F");
-            } else if (this.opponent.position == 1) {
-                $(".card_" + this.opponent.position).css("border", "3px solid #3BCEAC");
-            };
+            $(".card:eq("+this.opponent.position+")").css("border", "3px solid #FFD23F");
             var self = this;
-            $('.' + self.opponent.position + ' .btn-floating').click(function () {
-                if ($('.' + self.opponent.position + ' .btn-floating').hasClass('attack')) {
-                    this.choice = true;
-                    this.hasClicked = true;
+            $('.btn-floating').click(function () {
+                // récupérer getCurrentPlayer pour lui affecter le "choice"
+                console.log("has clicked")
+                if ($('.btn-floating').hasClass('attack')) {
+                    self.choice = true;
+                    self.hasClicked = true;
                 } else {
-                    this.choice = false;
-                    this.hasClicked = true;
+                    self.choice = false;
+                    self.hasClicked = true;
                 };
             });
-        }
-        if (this.hasClicked) {
+        if (self.hasClicked) {
             Effect.getEmpty();
-            if (this.choice == false) {
+            if (self.choice == false) {
                 this.opponent.attack = false;
                 $("#feed").append(this.opponent.name + " has chosen defense!" + '<br>');
                 Game.fightRound();
